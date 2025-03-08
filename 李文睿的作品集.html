@@ -1,87 +1,71 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人作品集</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        #sidebar {
+            width: 250px;
+            height: 100vh;
+            overflow-y: auto;
+            background: #f4f4f4;
+            padding: 15px;
+            position: fixed;
+        }
+        #content {
+            margin-left: 270px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        .category {
+            margin-bottom: 15px;
+        }
+        .subcategory {
+            margin-left: 15px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="zh"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;个人作品集&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>#sidebar {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 250px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow-y: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #f4f4f4;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>#content {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-left: 270px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-grow: 1;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h2 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.category {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.subcategory {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-left: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="sidebar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;个人作品集&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="category" onclick="toggleSubmenu('intro')"&gt;自我介绍&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="category" onclick="toggleSubmenu('news')"&gt;新闻报道&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subcategory" id="news"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 这里留出空间放二级分类 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="category" onclick="toggleSubmenu('photography')"&gt;摄影作品&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subcategory" id="photography"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="category" onclick="toggleSubmenu('data')"&gt;数据新闻&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subcategory" id="data"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="category" onclick="toggleSubmenu('commentary')"&gt;评论&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subcategory" id="commentary"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="category" onclick="toggleSubmenu('videos')"&gt;视频作品&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subcategory" id="videos"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;欢迎访问我的作品集&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;请从左侧选择一个分类查看具体内容。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function toggleSubmenu(id) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var submenu = document.getElementById(id);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (submenu.style.display === "block") {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>submenu.style.display = "none";</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>submenu.style.display = "block";</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div id="sidebar">
+        <h2>个人作品集</h2>
+        <div class="category" onclick="toggleSubmenu('intro')">自我介绍</div>
+        <div class="category" onclick="toggleSubmenu('news')">新闻报道</div>
+        <div class="subcategory" id="news">
+            <!-- 这里留出空间放二级分类 -->
+        </div>
+        <div class="category" onclick="toggleSubmenu('photography')">摄影作品</div>
+        <div class="subcategory" id="photography"></div>
+        <div class="category" onclick="toggleSubmenu('data')">数据新闻</div>
+        <div class="subcategory" id="data"></div>
+        <div class="category" onclick="toggleSubmenu('commentary')">评论</div>
+        <div class="subcategory" id="commentary"></div>
+        <div class="category" onclick="toggleSubmenu('videos')">视频作品</div>
+        <div class="subcategory" id="videos"></div>
+    </div>
+    <div id="content">
+        <h1>欢迎访问我的作品集</h1>
+        <p>请从左侧选择一个分类查看具体内容。</p>
+    </div>
+
+    <script>
+        function toggleSubmenu(id) {
+            var submenu = document.getElementById(id);
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
