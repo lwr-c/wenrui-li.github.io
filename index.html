@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人作品集</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        #sidebar {
+            width: 250px;
+            height: 100vh;
+            overflow-y: auto;
+            background: #f4f4f4;
+            padding: 15px;
+            position: fixed;
+        }
+
+        #content {
+            margin-left: 270px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .category {
+            margin-bottom: 15px;
+        }
+
+        .subcategory {
+            margin-left: 15px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sidebar">
+        <h2>个人作品集</h2>
+        <div class="category" onclick="toggleSubmenu('intro')">自我介绍</div>
+        <div class="subcategory" id="intro">
+            <!-- 这里可以放自我介绍的二级分类内容 -->
+        </div>
+        <div class="category" onclick="toggleSubmenu('news')">新闻报道</div>
+        <div class="subcategory" id="news">
+            <!-- 这里留出空间放二级分类 -->
+        </div>
+        <div class="category" onclick="toggleSubmenu('photography')">摄影作品</div>
+        <div class="subcategory" id="photography"></div>
+        <div class="category" onclick="toggleSubmenu('data')">数据新闻</div>
+        <div class="subcategory" id="data"></div>
+        <div class="category" onclick="toggleSubmenu('commentary')">评论</div>
+        <div class="subcategory" id="commentary"></div>
+        <div class="category" onclick="toggleSubmenu('videos')">视频作品</div>
+        <div class="subcategory" id="videos"></div>
+    </div>
+    <div id="content">
+        <h1>欢迎访问我的作品集</h1>
+        <p>请从左侧选择一个分类查看具体内容。</p>
+    </div>
+
+    <script>
+        function toggleSubmenu(id) {
+            var submenu = document.getElementById(id);
+            if (submenu) {
+                if (submenu.style.display === "block") {
+                    submenu.style.display = "none";
+                } else {
+                    submenu.style.display = "block";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
